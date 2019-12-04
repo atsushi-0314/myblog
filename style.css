@@ -1,114 +1,142 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <base href="{{site.github.url}}">
-        <meta charset="utf-8">
-            <title>my personal blog</title>
-            <link rel="stylesheet" href="./style.css" type="text/css"/>
-    </head>
-    <body>
-        <div class="headerbox">
-            <h1>Shogo Ninomiya</h1>
-        </div>
-        <div class="myname">
-            <div class="namebox">
-                <div class ="profile">
-                    <img src="img/mypic.jpg">
-                    <h2>Shogo Ninomiya<br>(二ノ宮将吾)</h2>
-                </div>
-                <div class="description">
-                    <h2>Biography</h2>
-                        <p>学部時代から、人の認知的活動について多方面からリサーチを企業をクライアントとして行う。2018年国際教養大学国際教養学部卒業後、サイボウズ株式会社に入社し、システムコンサルティング本部に所属する。
-                            その後、タクトピア株式会社にて主に高校や学校をクライアントとしたワークショップの企画を行う。
-                        </p>
-                    <h2>Interest</h2>
-                        <p>Cognitive Science, Philosphy, Software Development</p>
-                    <h2>Education</h2>
-                        <ul>
-                            <li>2013年 都立三田高校卒後</li>
-                            <li>2015年 米国 College of William & Mary留学</li>
-                            <li>2018年 国際教養大学国際教養大学 卒業</li>
-                        </ul>    
-                  </div>
-            </div>
-        </div>
-        <div class ="project">
-            <div id="title">
-                <h2>Personal Project</h2>
-            </div>
-            <div id="contents">
-                <div id="list">
-                        <div class="card4">
-                            <img src="./img/sample.jpg" class="image4">
-                            <p class="title4">タイトル</p>
-                        <p class="content4">本文</p>
-                        <div class="box4">
-                            <button class="continue4">続きを読む</button>
-                        </div>
-                        <div id="listitem-B">
-                                <h3>The Latest Post</h3>
-                                <div class = textA>hogehogehogeaaaaa</div>
-                            </div>
-                        <div id="listitem-C">
-                                <h3>The Latest Post</h3>
-                                <div class = textA>hogehogehogeaaaaa</div>
-                            </div>
-                        <div id="listitem-D">
-                                <h3>The Latest Post</h3>
-                                <div class = textA>hogehogehogeaaaaaaaa</div>
-                            </div>
-                        <div id="listitem-E">
-                                <h3>The Latest Post</h3>
-                                <div class = textA>hogehogehogeaaaaaaaaa</div>
-                            </div>    
-                </div>
-            </div>
-        </div>
-        <div class="blog">
-            <div class="blogcard">
-            </div>
-        </div>
-    </body>
-</html>
-
-<!-- 次のタスク-->
-<!-- 一番上が大きすぎる-->
-
-<!-- blogの部分を入れる-->
-<!-- contactの部分を入れる-->
-<!-- メニューバタンを入れる-->
+.headerbox{
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    background: #84b4b1;
+    padding-top: 40px;
+    margin: 0px;
+}
 
 
+html,
+body{
+    margin: 0px 0px 0px;
+    height:100%;
+}
 
 
+.myname {
+    text-align: left;
+    width: 100%;
+    height: 70%;
+    background:#343a40;
+    padding-top: 0px;
+    font-family: 'Helvetica',sans-serif;
+    color: #FFF;
+}
+
+.myname img {
+    width: 100%;
+    border-radius: 50%;
+    margin:20px;
+  }
+
+.namebox {
+    display: flex;
+    margin: 0px;
+}
+
+.profile{
+    flex:left;
+    margin: 20px;
+}
+
+div.profile > img {
+    margin: 10px;
+}
+
+div.profile > h2 {
+    margin: 0px;
+    text-align: center;
+}
 
 
-<!-- input; 全体的に構造についての理解を深めたい-->
-<!-- 全体的に中央に寄せていきたい-->
-<!-- input:flexについての概要をまとめるようにする-->
-<!-- biographyのしたにintrestの情報を入れる-->
-<!-- 文字の折り返しの部分を修正する-->
-<!-- デザインパターンを学びながら何が必要なのかを考える-->
-<!-- udacityの情報をチェックしながら、要件をクワテイク-->
-<!-- footerも入れたい-->
-<!-- gridレイアウトをカードの部分で取り入れるtoriireru-->
+.description {
+    flex: right;
+    /* height: 150px; */
+    width: 100%;
+    margin-right:40px;
+    margin-left:40px;
+    margin-top:20px;
+}
+
+
+h1 {
+    margin: 0px;
+}
+
+.project{
+    display:flex;
+    text-align: left;
+    height: 2opx;
+    width: 100%;
+    background:#204969;
+    padding-top: 0px;
+    color: white;
+    font-family: 'Helvetica',sans-serif;
+}
+
+#title {
+    margin-left: 30px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 5px;
+    font-size: 120%;
+}
 
 
 
-<!-- biographyのしたのコンテンツをいれる-->
-<!-- 上の方にメニュー画面を作成したい -->
-<!-- twitterのリンクを出すところをやす。-->
+#list {
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 300px 300px;
+    grid-auto-flow: dense; 
+    margin-top:60px;
+    margin-left:40px;
+}
 
+.blog {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    background:#1F4E74;
+    padding-top: 0px;
+    font-family: 'Helvetica',sans-serif;
+    color: #FFF;
+}
 
-
-<!-- Done-->
-<!-- input:floatについての概要をまとめるようにする-->
-<!-- まずはUdaityのturtorialセッションを終わらせる-->
-<!-- 名前の部分とbibriographyの部分が上と近くなってしまっているから、小さくする-->
-<!-- 文字の色がみにくのいでその辺を修正したい-->
-<!-- 文章改行をしておく-->
-<!-- descriptionのmarginを変更する-->
-<!-- Personal projectsのスライドを作成する-->
-<!-- Personal projectのdivを作成する-->
-<!-- imgとh2の距離を狭める-->
-<!-- ページ全体の大きさ-->
+.card4 {
+    width: 150x;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px #ccc;
+}
+.image4 {
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+.title4 {
+    font-size: 50%;
+    margin: 5px;
+    color: #444;
+}
+.content4 {
+    padding: 5px;
+    color: #666;
+}
+.box4 {
+    display: flex;
+    justify-content: flex-end;
+}
+.continue4 {
+    font-size: 80%;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #08f;
+    color: #08f;
+    background-color: transparent;
+}
